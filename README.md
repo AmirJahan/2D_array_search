@@ -1,5 +1,15 @@
 # 2D_array_search
 
+
+IMPORTANT
+- Run the app first, 
+- Rotate the simulator (CMD + Left)
+- Re-run the app
+
+
+
+
+
 This is a simple repo for a 2D array search in Swift
 the goal is more of a represnetation os the process than performance. 
 Feel free to fork and make a more performant one. 
