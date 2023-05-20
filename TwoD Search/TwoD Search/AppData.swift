@@ -10,6 +10,7 @@ class AppData
 {
     public static let inst = AppData()
     
+    // This must be 4 characters
     let searchWord = "rafa"
     var sequence : [String] = []
     // sequence of usable letters
@@ -21,16 +22,18 @@ class AppData
     var found = 0
     
     init () {
-        let firstChar = searchWord[searchWord.startIndex] // 'H'
-        let secondChar = searchWord[searchWord.index(searchWord.startIndex, offsetBy: 1)] // 'o'
-        let thirdChar = searchWord[searchWord.index(searchWord.startIndex, offsetBy: 2)] // 'o'
-        let fourthChar = searchWord[searchWord.index(searchWord.startIndex, offsetBy: 3)] // 'o'
-
-        sequence = [String(firstChar),
-                    String(secondChar),
-                    String(thirdChar),
-                    String(fourthChar)]
+        
+        let charCount = searchWord.count
+        
+        // you need to search for at least ONE character
+        let start = searchWord.startIndex
+        let firstChar = searchWord[start]
+        sequence.append(String(firstChar))
+        
+        for i in 1..<charCount
+        {
+            let nextChar = searchWord[searchWord.index(start, offsetBy: i)] // 'o'
+            sequence.append(String(nextChar))
+        }
     }
-    
-
 }
